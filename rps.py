@@ -23,6 +23,8 @@ def main():
         if player_choice not in ["rock", "paper", "scissors"]:
             print("Invalid choice. Please choose rock, paper, or scissors.")
             continue
+        
+        game_logic.player_move_history.append(player_choice)
 
         computer_choice = game_logic.get_computer_choice()
         print(f"computer choice: {computer_choice}")
